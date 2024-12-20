@@ -14,6 +14,11 @@ public class StringCalculatorTest {
     }
 
     @Test
+    public void testSingleNumberNegative() {
+        assertEquals(-20, StringCalculator.calcul("-20"));
+    }
+
+    @Test
     public void testTwoNumbers() {
         assertEquals(8, StringCalculator.calcul("3,5"));
     }
@@ -21,6 +26,11 @@ public class StringCalculatorTest {
     @Test
     public void testMultipleNumbers() {
         assertEquals(29, StringCalculator.calcul("10,6,6,7"));
+    }
+
+    @Test
+    public void testMultipleNumbersN() {
+        assertEquals(17, StringCalculator.calcul("10,-6,6,7"));
     }
 
     @Test
