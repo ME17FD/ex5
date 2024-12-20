@@ -11,7 +11,9 @@ public class StringCalculator {
         int sum = 0;
 
         for (String num : numbers) {
-            sum += Integer.parseInt(num.trim());
+            String i = num.trim();
+            if (!i.isEmpty()){
+            sum += Integer.parseInt(i.trim());}
         }
 
         return sum;

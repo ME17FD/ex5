@@ -48,6 +48,11 @@ public class StringCalculatorTest {
     public void testEndsWithComma() {
         assertEquals(29, StringCalculator.calcul("10,6,6,7,"));
     }
+    
+    @Test
+    public void testStartsWithComma() {
+        assertEquals(29, StringCalculator.calcul(",10,6,6,7"));
+    }
 
     @Test
     public void testNewlineSeparator() {
