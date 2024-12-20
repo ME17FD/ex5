@@ -4,8 +4,8 @@ public class StringCalculator {
     public static int calcul(String input) {
         
         if(input == null || input.isEmpty()) return 0;
-        
-        
+
+        input = input.replace("\n", ",");
 
         String[] numbers = input.split(",");
         int sum = 0;

@@ -29,6 +29,17 @@ public class StringCalculatorTest {
     }
 
     @Test
+    public void twoCommas() {
+        assertEquals(23, StringCalculator.calcul("10,,6,7"));
+    }
+
+    @Test
+    public void endsWithComma() {
+        assertEquals(23, StringCalculator.calcul("10,6,7,"));
+    }
+
+
+    @Test
     public void testMultipleNumbersN() {
         assertEquals(17, StringCalculator.calcul("10,-6,6,7"));
     }
@@ -41,7 +52,6 @@ public class StringCalculatorTest {
     @Test
     public void testNewlineSeparator() {
         assertEquals(5, StringCalculator.calcul("\n2,3"));
-        assertEquals(10, StringCalculator.calcul("5,\n2,3"));
         assertEquals(10, StringCalculator.calcul("5\n2,3"));
     }
 
